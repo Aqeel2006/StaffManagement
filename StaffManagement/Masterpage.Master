@@ -1,0 +1,129 @@
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Masterpage.master.cs" Inherits="StaffManagement.Masterpage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--boostrap css--%>
+    <link href="Boostrap/css/bootstrap.min.css" rel="stylesheet" />
+     <%--datatable css--%>
+    <link href="datatable/css/dataTables.dataTables.min.css" rel="stylesheet" />
+     <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <%--Custom Css css--%>
+    <link href="css/customStyleSheet.css" rel="stylesheet" />
+    
+
+
+    
+     <%--Jquery scrict--%>
+    <script src="Boostrap/js/jquery-3.3.1.slim.min.js"></script>
+     <%--popper Js--%>
+    <script src="Boostrap/js/popper.min.js"></script>
+     <%--boostrap Js--%>
+    <script src="Boostrap/js/bootstrap.min.js"></script>
+    <%--datatable Js--%>
+    <script src="datatable/js/dataTables.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light"> 
+                <a class=" navbar-brand" href="Homepage.aspx">
+                <img src="Image/logo.png" width="30" height="30" />
+                    Staff Rota Management 
+     
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapsa" data-target="#navbarSupportContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportContent">
+
+                   
+
+
+
+                      <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active">
+                            
+                            <asp:LinkButton  class="nav-link" ID="lbViewShift" runat="server" 
+                                OnClientClick="LinkButtonViewShift_Click" OnClick="lbViewShift_Click" Visible="False">View Shift</asp:LinkButton>
+                        </li>
+                         <li class="nav-item active">
+                            <asp:LinkButton  class="nav-link" ID="lbHoliday_Approval" runat="server" 
+                                OnClientClick="LinkButtonHoliday_Approval_Click" OnClick="lbHoliday_Approval_Click" Visible="False">Request Holiday</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton  class="nav-link btn-success btn btn-block" ID="lbLogin" runat="server" 
+                                OnClientClick="LinkButtonLogin_Click" OnClick="lbLogin_Click" Visible="True">Login</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton  class="nav-link" ID="lbLogout" runat="server" 
+                                OnClientClick="LinkButtonLogout_Click" OnClick="lbLogout_Click" Visible="False">Logout</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton  class="nav-link" ID="lbHello" runat="server" 
+                                OnClientClick="LinkButtonHello_Click" OnClick="lbHello_Click" Visible="False">Hello User </asp:LinkButton>
+                        </li>
+                          
+                    
+                    </ul>
+                         
+                    
+
+                </div>
+
+                
+            </nav>
+        </div>
+
+        <!--Main Content placeholder-->
+        <div>
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+             </asp:ContentPlaceHolder>
+        </div>
+         <!--Main Content placeholder-->
+
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+
+                            <asp:LinkButton class="footerlinks mr-1" ID="lbAdminLogin" runat="server" OnClick="lbAdminLogin_Click">Admin Login</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks mr-1" ID="lbUserprofile" runat="server" OnClick="lbUserprofile_Click" Visible="False">User Management</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks mr-1" ID="lbManagement" runat="server" OnClick="lbManagement_Click" Visible="False">Management</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks mr-1" ID="lbView" runat="server" OnClick="lbView_Click" Visible="False">View Member Details</asp:LinkButton>
+                            <asp:LinkButton class="footerlinks mr-1" ID="lbHolidaymanagement" runat="server" OnClick="lbHolidaymanagement_Click" Visible="False">Holiday Management</asp:LinkButton>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color: black">&copy Cpoyright 2024. <a class="footerlinks" href="#" target="_blank"> Staff Management</a> </p>
+                    </div>
+                
+            
+                </div>
+               </div>
+        </footer>
+
+
+    </form>
+</body>
+</html>

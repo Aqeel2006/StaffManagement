@@ -1,0 +1,30 @@
+﻿.footerlinks {
+    color: white;
+    text-decoration: none !important;
+}
+    .footerlinks:hover {
+        color: greenyellow;
+    }
+
+#footer1 {
+    background: #ff6a00;
+}
+
+#footer2 {
+    background: #ffd800;
+}
+
+.header {
+    padding: 50px;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: black;
+    font-size: 10px;
+    background-color: grey;
+}
